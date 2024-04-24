@@ -29,6 +29,7 @@ def is_any_upper(value):
     return False
     
 if __name__ == '__main__':
+    print("Enter a string:")
     s = input()
     N = len(s)
     

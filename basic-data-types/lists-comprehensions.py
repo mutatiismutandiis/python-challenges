@@ -1,3 +1,6 @@
+# INPUT: three integers x, y and z representing the dimensions of a cuboid along with an integer n. 
+# OUTPUT: list of all possible coordinates given by (i, j, k) on a 3D grid where the sum of x+y+z is not equal to n.
+
 if __name__ == '__main__':
     x = int(input())
     y = int(input())

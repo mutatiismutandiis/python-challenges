@@ -1,3 +1,16 @@
+# INPUT: A single line containing the thickness value for the logo: odd integer between 0 and 50
+# OUTPUT: H logo with the right size
+
+# Helper function
+def is_valid_input(value):
+    if (N<=0 or N>=50):
+        print("0<thickness<50")
+    elif (value%2 == 0):
+        print("Thickness needs to ve an odd number")
+    else:
+        return True
+
+# Helper functions to generate all the shapes according to the size
 def triangle_up(size):
     s = "H"
     line_length = 2*size - 1
@@ -40,12 +53,11 @@ def triangle_down(size):
         print(string_to_show)
         s = s[2:] + " "
 
+# Input and Output
+print("Enter a thickness for the logo between 0 and 50:")
 N = int(input())
 
-if N%2 == 0:
-    print("Thickness needs to ve an odd number")
-
-else:
+if (is_valid_input(N) == True):
     triangle_up(N)
     equal_columns(N)
     center_line(N)
